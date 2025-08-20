@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #eeeeee;
+}
+
+/* Header styles */
+header {
+  background: #000000;
+  color: white;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  padding: 1.25em 3.125em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5em;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Hero Section Styles */
+
+.heading {
+  text-align: center;
+  margin-top: 3.125rem;
+  font-size: 2.5rem;
+}
+
+.car-carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 3.125rem;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-1.05rem);
+}
+
+.car-image {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+}
+
+.car-details {
+  padding: 2.5rem;
+}
+
+.spec-list {
+  display: flex;
+  gap: 10%;
+  list-style: none;
+  align-items: center;
+}
+/* Responsive design */
+
+@media (max-width: 480px) {
+  .car-carousel {
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .car-carousel {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 536px) {
+  .nav-links {
+    display: none;
+  }
+}
